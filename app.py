@@ -22,10 +22,12 @@ def load_ckpt(ckpt_path):
 
     model = models.resnet18(pretrained=True)
     model.fc = nn.Sequential(OrderedDict([
-                      ('fc1', nn.Linear(512, 400)),
-                      ('relu', nn.ReLU()),
-                      ('fc2', nn.Linear(400, 3)),
-                      ('output', nn.LogSoftmax(dim=1))
+                          ('fc1', nn.Linear(512, 400)),
+                          ('relu', nn.ReLU()),
+                          ('fc2', nn.Linear(400, 200)),
+                          ('relu',nn.ReLU()),
+                          ('fc3', nn.Linear(200, 3)),
+                          ('output', nn.LogSoftmax(dim=1))
                       ]))
 
     model.load_state_dict(ckpt, strict=False)
