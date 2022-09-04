@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'HumanRaceClassifier'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_39BE59AC75914DBBB950C86833FBCFF0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_91D8661393C14D748A3F7D14AEE85717 }}
